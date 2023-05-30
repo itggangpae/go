@@ -1,0 +1,9 @@
+mode: set
+/Users/adam/Documents/lecture/Go/source/test/coverage/coverage.go:6.11,7.10 1 1
+/Users/adam/Documents/lecture/Go/source/test/coverage/coverage.go:7.10,9.3 1 1
+/Users/adam/Documents/lecture/Go/source/test/coverage/coverage.go:9.8,11.3 1 0
+/Users/adam/Documents/lecture/Go/source/test/coverage/coverage.go:15.20,16.12 1 1
+/Users/adam/Documents/lecture/Go/source/test/coverage/coverage.go:16.12,18.3 1 1
+/Users/adam/Documents/lecture/Go/source/test/coverage/coverage.go:18.8,18.19 1 0
+/Users/adam/Documents/lecture/Go/source/test/coverage/coverage.go:18.19,20.3 1 0
+/Users/adam/Documents/lecture/Go/source/test/coverage/coverage.go:20.8,22.3 1 0
