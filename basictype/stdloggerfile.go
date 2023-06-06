@@ -3,16 +3,17 @@ package main
 import (
 	"log"
 	"os"
+	"time"
 )
 
 func main() {
-	fpLog, err := os.OpenFile("logfile.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	fpLog, err := os.OpenFile(time.Now().Local().Format("2006-01-02"), os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
 		panic(err)
 	}
 	defer fpLog.Close()
 
-	// 표준로거를 파일로그로 변경
+	// 표준로거를 파일 로그로 변경
 	log.SetOutput(fpLog)
 
 	run()

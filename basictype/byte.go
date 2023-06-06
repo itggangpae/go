@@ -10,4 +10,5 @@ func main() {
 	fmt.Println(num1)
 	fmt.Println(num2)
 	fmt.Println(num3)
+	fmt.Printf("%c\n", num3)
 }

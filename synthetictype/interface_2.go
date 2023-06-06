@@ -12,7 +12,7 @@ type Person struct {
 	age  int
 }
 
-func (p Person) GetName() string {
+func (p *Person) GetName() string {
 	return p.name
 }
 func (p Person) GetAge() int {
@@ -25,6 +25,6 @@ func printNameAndAge(i MyInterface) {
 }
 
 func main() {
-	p := Person{"Adam", 51}
+	p := &Person{"Adam", 51}
 	printNameAndAge(p)
 }

@@ -19,6 +19,7 @@ func main() {
 		if err != nil {
 			continue
 		}
+
 		if i == 1 {
 			min = n
 			max = n

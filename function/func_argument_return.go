@@ -7,10 +7,10 @@ func sum1(a int, b int) int {
 	return a + b
 }
 
-// 리턴 값 변수의 이름을 r로 지정
+// 리턴되는 데이터의 이름을 r로 지정
 func sum2(a int, b int) (r int) {
-	r = a + b // 리턴값 변수 r에 값 대입
-	return    // 리턴값 변수를 사용할 때는 return 뒤에 변수를 지정하지 않음
+	r = a + b // 리턴되는 변수에 r에 값 대입
+	return    // 리턴되는 변수를 사용할 때는 return 뒤에 변수를 지정하지 않음
 }
 
 func main() {

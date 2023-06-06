@@ -11,6 +11,10 @@ func (p *Person) isA() {
 	fmt.Println("Is A")
 }
 
+func (p *Person) hello() {
+	fmt.Println("Hello")
+}
+
 type Student struct {
 	Person
 	school string
