@@ -1,17 +1,16 @@
-# syntax=docker/dockerfile:1
+FROM golang:alpine AS builder
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=amd64
 
-FROM golang:1.19
-
-WORKDIR /app
-
-COPY go.mod go.sum ./
+WORKDIR /build
+COPY go.mod go.sum main.go ./
 RUN go mod download
+RUN go build -o main .
+WORKDIR /dist
+RUN cp /build/main .
 
-COPY *.go ./
-
-# Build
-RUN CGO_ENABLED=0 GOOS=linux go build -o /dockerimage
-
-EXPOSE 8080
-
-CMD [ "/dockerimage" ]
+FROM scratch
+COPY --from=builder /dist/main .
+ENTRYPOINT ["/main"]
