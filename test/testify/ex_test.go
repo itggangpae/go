@@ -1,18 +1,28 @@
 package main
 
+import "fmt"
+
 import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/suite"
 )
 
-func TestSquare1(t *testing.T) {
-	assert := assert.New(t) //테스트 객체 생성
-	//함수 호출 결과 확인
-	assert.Equal(81, square(9), "square(9) 의 결과는 81") //테스트 함수 호출
+type ExampleTestSuite struct {
+	suite.Suite
+	VariableThatShouldStartAtFive int
 }
 
-func TestSquare2(t *testing.T) {
-	assert := assert.New(t)
-	assert.Equal(9, square(3), "square(3) 의 결과는 9")
+func (suite *ExampleTestSuite) SetupTest() {
+	fmt.Printf("테스트 시작 전 수행")
+	suite.VariableThatShouldStartAtFive = 5
+}
+
+func (suite *ExampleTestSuite) TestExample() {
+	assert.Equal(suite.T(), 5, suite.VariableThatShouldStartAtFive)
+}
+
+func TestExampleTestSuite(t *testing.T) {
+	suite.Run(t, new(ExampleTestSuite))
 }
