@@ -2,11 +2,26 @@ package main
 
 import "fmt"
 
-func main() {
-	//상수 선언
-	const NAME = "아담"
+// 상수 선언
+const NAME = "아담"
 
-	//나열형 상수 선언
+// 나열형 상수 선언
+const (
+	c1 = 10 //첫 번째 값은 무조건 초기화해야 함
+	c2
+	c3
+	c4 = "adam" //다른 종류의 데이터 선언 가능
+	c5
+	c6 = iota //c7까지 순서대로 값을 나열
+	c7
+	c8 = "End"
+	c9
+)
+
+func main() {
+	fmt.Println(NAME)
+	fmt.Println(c1, c2, c3, c4, c5, c6, c7, c8, c9)
+
 	//직접 데이터 설정
 	const (
 		MIN    = 0

@@ -29,8 +29,8 @@ import (
 )
 
 func f(n int) {
-	time.Sleep(time.Duration(100)) // 랜덤한 시간 동안 대기
-	fmt.Println(n)                 // n 출력
+	time.Sleep(time.Duration(10))
+	fmt.Println(n) // n 출력
 }
 
 func main() {
