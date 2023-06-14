@@ -1,8 +1,9 @@
 package main
 
 import (
-	"calc"
 	"fmt"
+
+	"github.com/itggangpae/package/calc"
 )
 
 func main() {

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 사용자 정의 정렬
 type ByLength []string
 
 func (s ByLength) Len() int {
