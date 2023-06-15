@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 사용자 정의 정렬
+// 사용자 정의 정렬을 위한 메서드 구현
 type ByLength []string
 
 func (s ByLength) Len() int {

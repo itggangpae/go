@@ -19,10 +19,14 @@ type Student struct {
 	Person
 	school string
 	grade  int
+	name   string
 }
 
 func main() {
 	var s Student
 	s.Person.isA()
 	s.isA()
+	s.name = "Hello"
+	s.Person.name = "hi"
+	fmt.Println(s)
 }

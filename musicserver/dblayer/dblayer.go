@@ -1,6 +1,6 @@
 package dblayer
 
-import "models"
+import "github.com/itggangpae/package/models"
 
 type DBLayer interface {
 	GetAllProducts() ([]models.Product, error)
